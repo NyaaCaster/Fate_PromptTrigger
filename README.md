@@ -21,22 +21,26 @@ NyaaFrame/
 │   ├── version.ts          # 版本与代码签名
 │   └── vite-env.d.ts       # Vite 类型声明
 ├── CLAUDE.md               # Claude Code 项目规则
-├── Dockerfile              # 多阶段构建（node-alpine → nginx-alpine）
+├── Dockerfile              # 多阶段构建（node-alpine → nginx-alpine，BuildKit 缓存）
 ├── docker-compose.yml      # 容器编排
 ├── index.html              # HTML 入口
+├── LICENSE                 # AGPL-3.0 许可证
 ├── meta.json               # 项目元数据（名称、堆栈、端口等）
 ├── nginx.conf              # Nginx 配置
 ├── package.json            # 依赖管理
+├── postcss.config.js       # PostCSS 配置（Tailwind）
 ├── rebuild.ps1             # Docker 构建重启脚本
 ├── tsconfig.json           # TypeScript 配置
 └── vite.config.ts          # Vite 配置
 ```
 
-## 端口与镜像
+## 端口
 
-| 服务 | 容器名 | 端口 | 镜像仓库 |
-|------|--------|------|----------|
-| app | nyaaframe | 3000:80 | localhost:5000/nyaaframe |
+| 服务 | 容器名 | 端口 |
+|------|--------|------|
+| app | nyaaframe | 3000:80 |
+
+> 容器名和端口为模板占位值，在项目初始化流程中会根据 `meta.json` 自定义。
 
 ## 使用方式
 
