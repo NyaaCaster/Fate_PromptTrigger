@@ -1,0 +1,13 @@
+{
+  "name": "NyaaFrame",
+  "description": "标准开发环境模板 — 用于快速启动 WebApp 和轻量服务开发",
+  "author": "NyaaCaster",
+  "repository": "https://github.com/NyaaCaster/NyaaFrame.git",
+  "registry": "h.hony-wen.com:5000/nyaaframe",
+  "stack": ["Nginx", "Vite", "React", "TypeScript", "Tailwind"],
+  "container": "nyaaframe",
+  "port": "3000:80",
+  "branch": "master",
+  "license": "AGPL-3.0",
+  "blessing": "Nyaa be with you."
+}
