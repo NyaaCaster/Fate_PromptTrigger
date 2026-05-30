@@ -4,6 +4,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 $COMPOSE_FILE = "docker-compose.yml"
+$env:DOCKER_BUILDKIT = "1"
+$env:COMPOSE_DOCKER_CLI_BUILD = "1"
 
 if ($NoCache) {
     Write-Host "Building image (no cache)..." -ForegroundColor Cyan
