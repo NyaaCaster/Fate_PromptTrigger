@@ -1,6 +1,6 @@
-# NyaaFrame
+# Fate_PromptTrigger
 
-> 标准开发环境模板 — 用于快速启动 WebApp 和轻量服务开发
+> 一场基于 LLM 的圣杯战争。
 
 ## 技术堆栈
 
@@ -8,9 +8,8 @@ Nginx + Vite + React + TypeScript + Tailwind
 
 ## 项目结构
 
-```
-NyaaFrame/
-├── .claude/skills/         # Claude Code 技能定义
+```text
+Fate_PromptTrigger/
 ├── .docs/                  # 项目文档
 │   └── BLUEPRINT.md        # 开发任务蓝图
 ├── .ref/                   # 参考文件（不纳入版本管理）
@@ -21,7 +20,7 @@ NyaaFrame/
 │   ├── version.ts          # 版本与代码签名
 │   └── vite-env.d.ts       # Vite 类型声明
 ├── CLAUDE.md               # Claude Code 项目规则
-├── Dockerfile              # 多阶段构建（node-alpine → nginx-alpine，BuildKit 缓存）
+├── Dockerfile              # 多阶段构建（node-alpine -> nginx-alpine，BuildKit 缓存）
 ├── docker-compose.yml      # 容器编排
 ├── index.html              # HTML 入口
 ├── LICENSE                 # AGPL-3.0 许可证
@@ -34,34 +33,22 @@ NyaaFrame/
 └── vite.config.ts          # Vite 配置
 ```
 
-## 端口
+## 端口与镜像
 
-| 服务 | 容器名 | 端口 |
-|------|--------|------|
-| app | nyaaframe | 3000:80 |
+| 服务 | 容器名 | 镜像 | 端口 |
+|------|--------|------|------|
+| client | fateprompttrigger | fateprompttrigger:latest | 5111:80 |
+| registry | — | localhost:5000/fateprompttrigger | — |
 
-> 容器名和端口为模板占位值，在项目初始化流程中会根据 `meta.json` 自定义。
+> `meta.json` 是项目元数据单一来源；端口与镜像信息应与该文件保持一致。
 
-## 使用方式
-
-### 作为模板创建新项目
-
-1. 复制本项目到新目录
-2. 使用 Claude Code 执行 `init-from-template` skill
-3. 按提示完成项目信息配置
-
-### 本地开发
-
-```bash
-npm install
-npm run dev
-```
-
-### Docker 部署
+## 部署流程
 
 ```powershell
-.\rebuild.ps1           # 使用缓存构建
-.\rebuild.ps1 -NoCache  # 无缓存构建
+npm install
+npm run build
+.\rebuild.ps1           # 使用缓存构建并重启
+.\rebuild.ps1 -NoCache  # 无缓存构建并重启
 ```
 
 ## Claude Code 入口
@@ -73,14 +60,13 @@ npm run dev
 | `CLAUDE.md` | 项目规则与约定 |
 | `.docs/BLUEPRINT.md` | 任务蓝图与进度 |
 
-Skills：
+常用 Skills：
 
 | 技能 | 用途 |
 |------|------|
 | `rebuild` | Docker 构建重启 |
 | `commit-push` | Git 提交推送 |
 | `sync-blueprint` | 蓝图维护 |
-| `init-from-template` | 模板初始化新项目 |
 
 ## License
 

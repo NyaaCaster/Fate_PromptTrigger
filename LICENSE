@@ -629,8 +629,7 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-NyaaFrame - A standard development environment template for building
-WebApps and lightweight services with Nginx + Vite + React + TypeScript + Tailwind.
+Fate_PromptTrigger - 一场基于 LLM 的圣杯战争.
 Copyright (C) 2026  NyaaCaster <https://github.com/NyaaCaster>
 
 This program is free software: you can redistribute it and/or modify
@@ -646,7 +645,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Source code is available at: https://github.com/NyaaCaster/NyaaFrame
+Source code is available at: https://github.com/NyaaCaster/Fate_PromptTrigger.git
 
 If your software can interact with users remotely through a computer
 network, you should also make sure that it provides a way for users to

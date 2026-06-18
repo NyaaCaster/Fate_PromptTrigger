@@ -1,4 +1,4 @@
-# NyaaFrame 项目文档
+# Fate_PromptTrigger 项目文档
 
 本目录用于存放项目文档。
 

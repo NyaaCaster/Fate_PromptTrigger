@@ -2,7 +2,7 @@
 
 ## 描述
 
-构建并重启项目的 Docker 容器。
+构建并重启 Fate_PromptTrigger 的 Docker 容器。
 
 ## 触发
 
@@ -19,8 +19,8 @@
 如果用户要求推送镜像：
 
 ```powershell
-docker tag nyaaframe:latest localhost:5000/nyaaframe:latest
-docker push localhost:5000/nyaaframe:latest
+docker tag fateprompttrigger:latest localhost:5000/fateprompttrigger:latest
+docker push localhost:5000/fateprompttrigger:latest
 ```
 
 ## 注意事项

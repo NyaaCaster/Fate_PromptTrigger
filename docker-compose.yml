@@ -1,7 +1,8 @@
 services:
-  app:
+  client:
     build: .
-    container_name: nyaaframe
+    container_name: fateprompttrigger
+    image: fateprompttrigger:latest
     ports:
-      - "3000:80"
+      - "5111:80"
     restart: unless-stopped
